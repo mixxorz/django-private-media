@@ -1,11 +1,13 @@
 
+
 class DefaultPrivatePermissions(object):
-    
+    """ Allow staff members to access files.
+    """
+
     def has_read_permission(self, request, path):
-        """
-        Just return True if the user is an authenticated staff member.
-        Extensions could base the permissions on the path too.
-        """
+        # Just return True if the user is an authenticated staff member.
+        # Extensions could base the permissions on the path too.
+
         user = request.user
         if not user.is_authenticated():
             return False
@@ -15,4 +17,3 @@ class DefaultPrivatePermissions(object):
             return True
         else:
             return False
-

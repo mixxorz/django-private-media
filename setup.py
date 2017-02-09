@@ -1,24 +1,26 @@
 import os
 from setuptools import setup, find_packages
 
+import private_media
+
 README = open(os.path.join(os.path.dirname(__file__), 'README.txt')).read()
 
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
-    name = 'django-private-media',
-    version = '0.1.3',
-    packages = find_packages(),
-    include_package_data = True,
-    license = 'BSD License',
-    description = """Private media for Django. Check the user's authorization before serving files at PRIVATE_MEDIA_URL, uploaded to PRIVATE_MEDIA_ROOT. Requires Django 1.5.""",
-    long_description = README,
-    keywords = "private media xsendfile",
-    url = 'https://github.com/RacingTadpole/django-private-media',
-    author = 'Arthur Street',
-    author_email = 'arthur@racingtadpole.com',
-    classifiers = [
+    name='django-private-media',
+    version=private_media.__version__,
+    packages=find_packages(),
+    include_package_data=True,
+    license=private_media.__license__,
+    description=private_media.__doc__,
+    long_description=README,
+    keywords="private media xsendfile",
+    url='https://github.com/RacingTadpole/django-private-media',
+    author='Arthur Street',
+    author_email='arthur@racingtadpole.com',
+    classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
         'Intended Audience :: Developers',
@@ -29,5 +31,4 @@ setup(
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
-    zip_safe = False,
-)
+    zip_safe=False)
