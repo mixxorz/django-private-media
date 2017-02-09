@@ -1,6 +1,6 @@
-=====
+====================
 django-private-media
-=====
+====================
 
 Overview
 --------
@@ -26,7 +26,7 @@ Caveats
 Although it works satisfactorily for my purposes so far, this is not a finished project. In particular, it does not have any tests. Yet.
 
 Requirements
---------------
+------------
 Django 1.5 or later.
 
 Quick start
@@ -122,5 +122,3 @@ And then provide a permissioning class like this (which lets staff and the owner
                 return (user.pk==owner_pk)
 
 Detailed documentation is provided at `<http://racingtadpole.com/blog/private-media-with-django>`_ and in the "docs" directory (pending).
-
-
